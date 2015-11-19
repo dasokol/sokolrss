@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\david_000\Documents\PyCharm\Projects\RSS Feed\venv"
+set "VIRTUAL_ENV=C:\Users\david_000\Documents\GitHub\sokolrss\venv"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
