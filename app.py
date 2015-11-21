@@ -39,7 +39,7 @@ def loadPage():
 	        ga('create', 'UA-68962940-2', 'auto'); ga('send', 'pageview');
 	    </script>
 	    <!-- Latest compiled and minified CSS -->
-	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	    <!-- jQuery library -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	    <!-- Latest compiled JavaScript -->
