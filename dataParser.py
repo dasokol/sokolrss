@@ -2,7 +2,7 @@ __author__ = 'david_000'
 import feedparser
 
 def getWeather():
-    weatherData = feedparser.parse('http://weather.yahooapis.com/forecastrss?p=48382')
+    weatherData = feedparser.parse('https://query.yahooapis.com/v1/public/yql?q=select%20%20*%20from%20weather.forecast%20where%20woeid=12778800')
     return weatherData.entries[0].title, weatherData.entries[0].description
 
 def getSports():
