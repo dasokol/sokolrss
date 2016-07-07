@@ -13,8 +13,7 @@ def loadPage():
 	sports = ""
 	
 	weather = getWeather()
-	title = weather[0]
-	description = weather[1]
+	
 	sports = getSports()
     #date = getSports[0]
 	news = getNews()
@@ -70,7 +69,7 @@ def loadPage():
         	<a href="%s">%s</p><br>
     	</body>
 	</html>
-	''' %(title, description[:-275].replace("<![CDATA[", ""), sports[0], sports[1], sports[2], sports[3], sports[4], sports[5], sports[6], sports[7],
+	''' %(weather[0], weather, sports[0], sports[1], sports[2], sports[3], sports[4], sports[5], sports[6], sports[7],
     	news[0], news[1], news[2], news[3], news[4], news[5], news[6], news[7], news[8], news[9], news[10], news[11],
     	news[12], news[13], news[14], history[0], history[1])
 	return html
