@@ -2,7 +2,7 @@ __author__ = 'david_000'
 import feedparser
 
 def getWeather():
-    weatherData = feedparser.parse('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid=12778800')
+    weatherData = feedparser.parse('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid=12778800&format=json')
     return weatherData
     #return weatherData.entries[0].title, weatherData.entries[0].description
 
