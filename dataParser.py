@@ -3,7 +3,7 @@ import feedparser
 import requests
 
 def getWeather():
-    weatherData = requests.get('https://query.yahooapis.com/v1/public/yql?q=select%20%20*%20from%20weather.forecast%20where%20woeid=12778800')
+    weatherData = requests.get('https://query.yahooapis.com/v1/public/yql?q=select%20%20*%20from%20weather.forecast%20where%20woeid=12778800&format=json')
     weatherData = weatherData.json()
     data = weatherData["query"]["results"]["channel"]["item"]
     
