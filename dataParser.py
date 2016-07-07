@@ -1,10 +1,11 @@
 __author__ = 'david_000'
 import feedparser
+import requests
 
 def getWeather():
-    weatherData = feedparser.parse('https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid=12778800&format=json')
-    return weatherData
-    #return weatherData.entries[0].title, weatherData.entries[0].description
+    weatherData = requests.get('https://query.yahooapis.com/v1/public/yql?q=select%20%20*%20from%20weather.forecast%20where%20woeid=12778800')
+    data = weatherData["query"]["results"]["channel"]["item"]
+    return data["title"], data["description"]
 
 def getSports():
     tigersData = feedparser.parse('https://sports.yahoo.com/mlb/teams/det/rss.xml')
