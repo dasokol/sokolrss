@@ -9,7 +9,7 @@ def getWeather():
     try:
         val = data["title"], data["description"].replace('<![CDATA[', '').replace("Low", " Low")
         last_forecast_index = val[1].rfind(". ")
-        val[1] = val[1][:last_forecast_index+val[1][last_forecast_index:].find("\n")]
+        val = val[0], val[1][:last_forecast_index+val[1][last_forecast_index:].find("\n")]
 
     except:
         val = "Unavailable", "Unavailable"
