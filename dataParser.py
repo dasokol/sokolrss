@@ -35,7 +35,7 @@ def getSports():
     except:
         val4 = "Unavailable", "Unavailable"
         
-    return val1, val2, val3, val4
+    return val1[0], val1[1], val2[0], val2[1], val3[0], val3[1], val4[0], val4[1]
 
 def getNews():
     newsData = feedparser.parse('http://www.npr.org/rss/rss.php?id=1001')
