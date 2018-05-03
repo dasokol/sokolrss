@@ -7,7 +7,10 @@ def getWeather():
     weatherData = weatherData.json()
     data = weatherData["query"]["results"]["channel"]["item"]
     try:
-        val = data["title"], data["description"]
+        val = data["title"], data["description"][:-275].replace('<![CDATA[', '').replace("Low", " Low")
+        last_forecast_index = val[1].rfind(". ")
+        val[1] = val[1][:last_forecast_index+val[1][last_forecast_index:].find("\n")]
+
     except:
         val = "Unavailable", "Unavailable"
         
