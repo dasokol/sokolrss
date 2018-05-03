@@ -10,11 +10,6 @@ def loadPage():
 	weather = getWeather()
 	title = weather[0]
 	description = weather[1]
-	try:
-	    description = description[:-275].replace("<![CDATA[", "")
-	except:
-		description = "Unavailable"
-
 	sports = getSports()
 	news = getNews()
 	history = getHistory()
@@ -73,3 +68,6 @@ def loadPage():
     	news[12], news[13], news[14], history[0], history[1])
 	return html
 
+@app.route('/Unavailable')
+def Unavailable():
+	return loadPage()
