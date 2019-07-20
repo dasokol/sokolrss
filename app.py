@@ -7,12 +7,16 @@ app.config['DEBUG'] = True
 
 @app.route('/')
 def loadPage():
-	weather = getWeather()
+	try: weather = getWeather()
+	except: weather = ["Unavailable"]*2
 	title = weather[0]
 	description = weather[1]
-	sports = getSports()
-	news = getNews()
-	history = getHistory()
+	try: sports = getSports()
+	except: sports = ["Unavailable"]*8
+	try: news = getNews()
+	except: news = ["Unavailable"]*15
+	try: history = getHistory()
+	except: history = ["Unavailable"]*2
 
 	html = '''
 	<!DOCTYPE html>
